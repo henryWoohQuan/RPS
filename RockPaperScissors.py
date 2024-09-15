@@ -1,8 +1,6 @@
 import cv2
 import time
-import os
 import HandDetector as htm
-import math
 
 wCam, hCam = 640, 480
 
@@ -42,7 +40,7 @@ while True:
         
         if fingerCount == 4:
             print("paper")
-        elif fingerCount > 1:
+        elif not fingers[0] and not fingers[1]:
             print("scissors")
         else:
             print("rock")
