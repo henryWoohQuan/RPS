@@ -23,12 +23,24 @@ This project is an interactive Rock Paper Scissors game that uses computer visio
 - Pillow for image handling
 
 ## Setup and Installation
-1. Clone the repository
-2. Install required packages:
-```
-pip install -r requirements.txt
-```
-3. Run the main Script
+
+### Prerequisites
+- Python 3.8 or higher
+- Pip (Python package installer)
+- Webcam
+
+### Step-by-step Installation
+![carbon](https://github.com/user-attachments/assets/da9779d4-4f62-482e-a95d-91991a810828)
+
+### Troubleshooting
+- If you encounter a "DLL load failed" error on Windows, try installing the Microsoft Visual C++ Redistributable.
+- For webcam issues, ensure that your camera is not being used by another application.
+
+### Additional Notes
+- The game works best in a well-lit environment.
+- For optimal hand detection, ensure your hand is clearly visible in the camera frame, you will know your hand is being detected when it draws lines and joints on your fingers
+
+If you encounter any other issues during setup, please open an issue in the GitHub repository.
 
 ## How to Play
 1. Launch the game and allow webcam access.
