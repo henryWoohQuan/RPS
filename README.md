@@ -52,7 +52,6 @@ If you encounter any other issues during setup, please open an issue in the GitH
 1. Making it so the "ROCK" "PAPER" "SCISSORS" game state changes happen on the user's hand going up and then down again to increase interactivity and give the player more impact and responsiveness.
 2. Adding pictures (possibly animations?) to the robot, GameStateWindow, and both the UserChoiceWindow and RobotChoiceWindow would make the game feel more real
 3. It would be really cool to make the windows have a fly-in animation kind of like a pokemon battle start where the user window is a trainer and the computer is a trainer but I need to learn more about Tkinter and GUIs to make that possible (although I know it would be possible it would just take awhile to get it to fit the vision)
-4. 
 
 ## Post Mortem
 1. Creating a game through a webcam window and multiple GUI windows is inherently janky and hard to work with, would not recommend.
