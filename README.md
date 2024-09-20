@@ -25,3 +25,13 @@ This project is an interactive Rock Paper Scissors game that uses computer visio
 ## Setup and Installation
 1. Clone the repository
 2. Install required packages:
+'''
+pip install -r requirements.txt
+'''
+3. Run the main Script
+
+4. ## How to Play
+1. Launch the game and allow webcam access.
+2. Hold your hand in front of the camera.
+3. Make a Rock, Paper, or Scissors gesture when prompted.
+4. The AI will make its choice, and the winner will be displayed.
