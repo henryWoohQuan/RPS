@@ -25,13 +25,24 @@ This project is an interactive Rock Paper Scissors game that uses computer visio
 ## Setup and Installation
 1. Clone the repository
 2. Install required packages:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 3. Run the main Script
 
-4. ## How to Play
+## How to Play
 1. Launch the game and allow webcam access.
 2. Hold your hand in front of the camera.
 3. Make a Rock, Paper, or Scissors gesture when prompted.
 4. The AI will make its choice, and the winner will be displayed.
+
+## Future Improvements
+1. Making it so the "ROCK" "PAPER" "SCISSORS" game state changes happen on the user's hand going up and then down again to increase interactivity and give the player more impact and responsiveness.
+2. Adding pictures (possibly animations?) to the robot, GameStateWindow, and both the UserChoiceWindow and RobotChoiceWindow would make the game feel more real
+3. It would be really cool to make the windows have a fly-in animation kind of like a pokemon battle start where the user window is a trainer and the computer is a trainer but I need to learn more about Tkinter and GUIs to make that possible (although I know it would be possible it would just take awhile to get it to fit the vision)
+4. 
+
+## Post Mortem
+1. Creating a game through a webcam window and multiple GUI windows is inherently janky and hard to work with, would not recommend.
+2. Such a high level of Python abstraction becomes much harder to work with and maintain + Code itself is messy and needs to be documented better in general.
+3. The GUI could be much more clean and I suspect it wouldn't work properly on a different sized screen even though I tried my best to make it responsive to the screen size (although I haven't been able to test it).
