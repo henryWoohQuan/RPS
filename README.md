@@ -1,5 +1,5 @@
 # RPS-with-CV
-# AI-Powered Rock Paper Scissors Game
+![🪨Rock_📄Paper_✂️ScissorsVSComputer(with_Computer_Vision)](https://github.com/user-attachments/assets/7b3aa1e8-58bc-4718-977c-ed8279bf9a16)
 
 ## Overview
 This project is an interactive Rock Paper Scissors game that uses computer vision to detect hand gestures. Players can play against an AI opponent using their webcam, with real-time hand tracking and gesture recognition, an interactive GUI with multiple windows for game state, player choice, and AI choice, an AI opponent with randomized choices, Visual feedback for game progress and results.
