@@ -6,7 +6,8 @@ from cvButton import cvButton
 # cam width and height
 wCam, hCam = 640, 480
 
-playButton = cvButton(25, (395, 120), 1, "Play Game")
+playButton = cvButton(25, (395, 120), "Play Game", (255, 0, 0))
+
 
 # mp indices for each finger
 POINTER = 8
@@ -27,14 +28,17 @@ detector = RPSDetector.rpsDetector(detectionCon=0.7, trackCon=0.9)
 while True:
     # reading camera + finding hands using mp + finding positions of joints
     success, img = cap.read()
+    img = cv2.flip(img, 1)
     detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
     
     if len(lmList) != 0:
         result = detector.rockPaperOrScissors()
-        print(lmList[5])
     
-    print(playButton.drawButton(img, lmList))
+    if(playButton.drawButton(img, lmList)):
+        print("pushed")
+    
+        
     
     cTime = time.time()
     fps = 1/(cTime - pTime)
