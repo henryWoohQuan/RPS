@@ -44,9 +44,10 @@ If you encounter any other issues during setup, please open an issue in the GitH
 
 ## How to Play
 1. Launch the game and allow webcam access.
-2. Hold your hand in front of the camera.
+2. Hold your hand over the start game button.
 3. Make a Rock, Paper, or Scissors gesture when prompted.
 4. The AI will make its choice, and the winner will be displayed.
+5. hold hand in top right over the exit button.
 
 ## Future Improvements
 1. Making it so the "ROCK" "PAPER" "SCISSORS" game state changes happen on the user's hand going up and then down again to increase interactivity and give the player more impact and responsiveness.
