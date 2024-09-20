@@ -24,6 +24,14 @@ class CameraWindow(Window):
         button_x = (self.width - button_width) // 2
         button_y = (self.height // 2) - button_height
         self.start_button.setPos((button_x, button_y))
+        
+        # Create the End Program Button instance
+        self.end_button = Button(4, (0, 0), "Exit", 0.7, (255, 0, 0))
+        end_button_width = self.end_button.width
+        end_button_height = self.end_button.height
+        end_button_x = self.width - end_button_width - 30  # 10 pixels from right edge
+        end_button_y = 40  # 10 pixels from top edge
+        self.end_button.setPos((end_button_x, end_button_y))
 
         self.detector = RPSDetector(detectionCon=0.7, trackCon=0.9)
         self.game_active = False
@@ -45,6 +53,10 @@ class CameraWindow(Window):
             else:
                 # Just draw the button without checking for activation
                 self.start_button.drawButton(frame, lm_list, False)
+                
+            # Always draw and check the end button
+            if self.end_button.drawButton(frame, lm_list, True):
+                self.main_app.end_program()
 
             # Convert the image from OpenCV BGR format to RGB
             rgb_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

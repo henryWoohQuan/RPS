@@ -83,6 +83,19 @@ class MainApplication:
             self.game_state_window.hide()
         self.camera_window.center()
         self.camera_window.set_game_active(False)
+        
+    def end_program(self):
+        if self.robot_window:
+            self.robot_window.window.destroy()
+        if self.user_choice_window:
+            self.user_choice_window.window.destroy()
+        if self.robot_choice_window:
+            self.robot_choice_window.window.destroy()
+        if self.game_state_window:
+            self.game_state_window.window.destroy()
+        self.camera_window.window.destroy()
+        self.root.quit()
+        self.root.destroy()
 
     def run(self):
         self.root.mainloop()
