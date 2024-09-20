@@ -3,7 +3,7 @@ import mediapipe as mp
 import math
 
 
-class rpsDetector:
+class RPSDetector:
     def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
         self.mode = mode
         self.maxHands = maxHands
@@ -42,9 +42,9 @@ class rpsDetector:
         return self.lmList
     
     def fingerBent(self, fingerID, bentCon): 
-        tip = fingerID
-        mid = fingerID - 2
-        knuc = fingerID - 3
+        tip = fingerID # tip of finger passed
+        mid = fingerID - 2 # joint 2 knuckles down
+        knuc = fingerID - 3 # joint 3 knuckles down
         axDiff = (self.lmList[tip][1] - self.lmList[mid][1])
         ayDiff = (self.lmList[tip][2] - self.lmList[mid][2])
         a = math.sqrt(axDiff * axDiff + ayDiff * ayDiff) #distance from 8 to 6
@@ -61,12 +61,13 @@ class rpsDetector:
         return angle > bentCon
     
     def rockPaperOrScissors(self):
-        pointerBent = self.fingerBent(8, -.65)
-        middleBent = self.fingerBent(12, -.65)
-        ringBent = self.fingerBent(16, -.65)
-        pinkyBent = self.fingerBent(20, -.65)
+        POINTER = 8
+        MIDDLE = 12
+        RING = 16
+        PINKY = 20
         
-        fingers = [pointerBent, middleBent, ringBent, pinkyBent]
+        fingers = [self.fingerBent(POINTER, -.65), self.fingerBent(MIDDLE, -.65), 
+                   self.fingerBent(RING, -.65), self.fingerBent(PINKY, -.65)]
         fingerCount = 0
          
         for fingerBent in fingers:
@@ -74,8 +75,11 @@ class rpsDetector:
                 fingerCount += 1
         
         if fingerCount == 4:
-            return "p"
+            # int associated with Paper
+            return 1
         elif not fingers[0] and not fingers[1]:
-            return "s"
+            # int associated with Scissors
+            return 2
         else:
-            return "r"
+            # int associated with Rock
+            return 0
