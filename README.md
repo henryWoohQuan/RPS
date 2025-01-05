@@ -1,4 +1,3 @@
-# GesturePlay RPS
 # Computer Vision-Powered Rock Paper Scissors Game
 
 ## Overview
